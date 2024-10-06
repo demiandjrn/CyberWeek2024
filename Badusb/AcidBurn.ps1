@@ -1,22 +1,3 @@
-############################################################################################################################################################                      
-#                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
-# Title        : AcidBurn          | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
-# Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
-# Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
-# Category     : Prank             | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
-# Target       : Windows 7,10,11   |                                                                   |___/ #           /\/|_      __/\\                  #     
-# Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
-#                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
-#                                  |   and yea curiosity killed the cat                        ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                                                                                              
-#                                  |    but satisfaction brought him back                     (((^_(((/(((_/ #          /     \     /     \                #    
-#__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
-#                                                                                                            #         /       \   /     ~ \               #
-#  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
-#  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
-#  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
-#  youtube.com/c/IamJakoby        (youtube link with demonstration coming soon)                              #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
-############################################################################################################################################################
-
 <#
 .NOTES
 	This script was not optimized to shorten the code. This script is intended to have as much readablility as possible for new coders to learn. 
@@ -83,7 +64,7 @@ function Get-RAM {
     $RAMpos = $RAM.IndexOf('.')
     $RAM = [int]$RAM.Substring(0,$RAMpos).Trim()
 
-# ENTER YOUR CUSTOM RESPONSES HERE
+
 #----------------------------------------------------------------------------------------------------
     $lowRAM = "$RAM gigs of ram? might as well use pen and paper"
     
@@ -377,7 +358,7 @@ if (!$Networks) { Write-Host "variable is null"
 
 # this is the message that will be coded into the image you use as the wallpaper
 
-	$hiddenMessage = "`n`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back `n with love -Jakoby"
+	$hiddenMessage = "`n`nCyberWeek 2024 `n Curiosity killed the cat `n Avoid Downloading Unknown File `n Think Before You Click `n Do Not Connect Unknown Devices `n Let's work together to keep our organization secure!"
 
 # this will be the name of the image you use as the wallpaper
 
@@ -567,7 +548,7 @@ $LAST_PASSwarn =  Get-Days_Set
 
 $EMAILwarn = Get-email 
 
-$OUTRO =  "My crime is that of curiosity.... 	and yea curiosity killed the cat....     but satisfaction brought him back.... later $fullName"
+$OUTRO =  "Curiosity killed the cat....    $fullName"
 
 # echo statement used to track progress while debugging
 echo "Speak Variables set"
@@ -663,9 +644,9 @@ $s.Speak($OUTRO)
 
 # this snippet will leave a message on your targets desktop 
 
-$message = "`nMy crime is that of curiosity `nand yea curiosity killed the cat `nbut satisfaction brought him back"
+$message = "`nCyberWeek 2024 `n Curiosity killed the cat"
 
-Add-Content $home\Desktop\WithLove.txt $message
+Add-Content $home\Desktop\CyberWeek2024.txt $message
 ###########################################################################################################
 
 <#
