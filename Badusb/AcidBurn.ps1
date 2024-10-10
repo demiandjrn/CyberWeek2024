@@ -66,13 +66,13 @@ function Get-RAM {
 
 
 #----------------------------------------------------------------------------------------------------
-    $lowRAM = "$RAM gigs of ram? might as well use pen and paper"
+    $lowRAM = "I’ve discovered that you have only $RAM gigs of RAM. That’s quite low by today's standards, which could limit performance. It might be a good idea to upgrade, but I suppose for an attacker, this wouldn’t slow them down much."
     
-    $okRAM = "$RAM gigs of ram really? I have a calculator with more computing power"
+    $okRAM = "I see that you have $RAM gigs of RAM. Not bad, but not great either. This level of memory can handle basic tasks, but it leaves your system a bit vulnerable to rapid exploitation."
     
-    $goodRAM = "$RAM gigs of ram? Can almost guarantee you have a light up keyboard.. you are a wanna be streamer huh?"
+    $goodRAM = "You’ve got $RAM gigs of RAM, which is decent! However, more RAM means an attacker could quickly execute complex tasks without any noticeable slowdown on your system."
 
-    $impressiveRAM = "$RAM gigs of ram? are you serious? a super computer with no security that is funny right there"
+    $impressiveRAM = "$RAM gigs of RAM? Now that’s impressive! But remember, a powerful system without proper security is a big target for attackers like me to use that power against you."
 #----------------------------------------------------------------------------------------------------
 
     if($RAM -le 4){
@@ -177,11 +177,11 @@ function Get-Pass {
 
 # ENTER YOUR CUSTOM RESPONSES HERE
 #----------------------------------------------------------------------------------------------------
-    $badPASS = "$pro is not a very creative name but at least it is not as bad as your wifi password... only $pwl characters long? $pass ...? really..? $pass was the best you could come up with?"
+    $badPASS = "I just checked your Wi-Fi network, $pro. Your password is only $pwl characters long, and it’s quite weak: $pass? You might as well have handed me the keys to your network."
     
-    $okPASS = "$pro is not a very creative name but at least you are trying a little bit, your password is $pwl characters long, still trash though.. $pass ...? You can do better"
+    $okPASS = "Your Wi-Fi, $pro, has a $pwl-character-long password. It's slightly better than the worst-case scenario, but $pass still makes it relatively easy for someone like me to crack it."
     
-    $goodPASS = "$pro is not a very creative name but At least you are not a total fool... $pwl character long password actually is not bad, but it did not save you from me did it? no..it..did..not! $pass is a decent password though."
+    $goodPASS = "$pro isn’t the most original network name, but at least your $pwl-character password, $pass, shows some effort. It’s not bad at all—although it still couldn’t stop me from getting in."
 #----------------------------------------------------------------------------------------------------
 
     if($pass.length -lt 8) { return $badPASS
@@ -457,11 +457,11 @@ echo "All Wifi Passes Done"
 
 # ENTER YOUR CUSTOM RESPONSES HERE 
 #---------------------------------------------------------------------------------------------------- 
-    $newPass = "$pls was the last time you changed your password... You changed your password $days days ago..   I have to applaud you.. at least you change your password often. Still did not stop me! "
+    $newPass = "You changed your password $days days ago. That’s a good habit! Regularly updating passwords makes it harder for attackers to exploit old data."
     
-    $avgPASS = "$pls was the last time you changed your password... it has been $days days since you changed your password, really starting to push it, i mean look i am here. that tells you something " 
+    $avgPASS = "It has been $days days since you changed your password. You’re cutting it close. As you can see, I’ve managed to slip in before you could update it again." 
     
-    $oldPASS = "$pls was the last time you changed your password... it has been $days days since you changed your password, you were basically begging me to hack you, well here i am! "
+    $oldPASS = "You last changed your password $days days ago. That’s far too long, and it left your system wide open for me to exploit. Don’t make it so easy next time."
 #----------------------------------------------------------------------------------------------------      
     
     if($days -lt 45) { return $newPass
@@ -507,10 +507,10 @@ function Get-email {
         
 # ENTER YOUR CUSTOM RESPONSES HERE
 #----------------------------------------------------------------------------------------------------
-    $gmailResponse = "At least you use G Mail.. we should be friends. If you are down just email me back, ill message you at $email. That is your email right?"
-    $yahooResponse = "a yahoo account seriously? you are either in your 50's or just got done doing some time, a lot of it.. $email .. this is sad"
-    $hotmailResponse = "really?. you have a hotmail account? $email .. I am sending this to the f b I they need to check your hard drive"
-    $otherEmailResponse = "I dead ass do not even know what this is.. $email .. hope you did not think it was safe"
+    $gmailResponse = "At least you use Gmail. It’s a more secure email service. I’ll shoot you a message at $email. Hope you don't mind."
+    $yahooResponse = "Yahoo? Really? $email... That’s either a sign you’re a bit outdated or just not very security-conscious. Either way, attackers love seeing accounts like this."
+    $hotmailResponse = "A Hotmail account, $email? That’s a red flag. Even the FBI would be concerned about how outdated and vulnerable your email setup is."
+    $otherEmailResponse = "I don’t even recognize this email provider: $email. If you thought it was secure, I’ve got bad news—it’s not safe at all."
 #----------------------------------------------------------------------------------------------------
 
     if($email -like '*gmail*') { return $gmailResponse
@@ -536,7 +536,7 @@ echo "Email Done"
 	This function will run all the previous functions and assign their outputs to variables
 #>
 
-$intro = "$fullName , it has been a long time my friend"
+$intro = "$fullName... I've been watching your system for a while now. It’s amazing how much I’ve uncovered without you even knowing. Shall we take a closer look?"
 
 $RAMwarn = Get-RAM  
 
@@ -548,7 +548,7 @@ $LAST_PASSwarn =  Get-Days_Set
 
 $EMAILwarn = Get-email 
 
-$OUTRO =  "Curiosity killed the cat....    $fullName"
+$OUTRO =  "Remember, $fullName... trust no one—not even those who claim to protect you. Today it’s me, but tomorrow it could be someone far worse. Stay vigilant."
 
 # echo statement used to track progress while debugging
 echo "Speak Variables set"
